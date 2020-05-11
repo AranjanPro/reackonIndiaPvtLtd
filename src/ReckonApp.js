@@ -3,6 +3,7 @@ import './App.css';
 import LoginScreen from './Loginscreen';
 import logo from './reckonlogo.png';
 import backgroundImage from './Reckon.png';
+import RegisterScreen from './Register.js';
 
 class App extends Component {
   constructor(props){
@@ -12,16 +13,21 @@ class App extends Component {
       uploadScreen:[]
     }
     this.handleLoginClick = this.handleLoginClick.bind(this);
+    this.handleRegisterClick=this.handleRegisterClick.bind(this);
+    this.state={isRegister:false};
     this.state = {isGoToLogin: false};
   }
 
   handleLoginClick() {
     this.setState({isGoToLogin: true});
   }
-
+  handleRegisterClick(){
+    this.setState({isRegister: true});
+  }
   componentWillMount(){
     var loginPage =[];
     loginPage.push(<LoginScreen appContext={this} key={"login-screen"}/>);
+    loginPage.push(<RegisterScreen appContext={this} key={"register-screen"}/>);
     this.setState({
                   loginPage:loginPage
                     })
@@ -30,6 +36,7 @@ class App extends Component {
   render() {
 
     const isGoToLogin = this.state.isGoToLogin;
+    const isRegister = this.state.isRegister;
     // const divStyle = {
     //   width: '100vw',
     //     height: '99vh',
@@ -67,8 +74,14 @@ class App extends Component {
             className="App-btn btn2"
             href="#" onClick={(event) => this.handleLoginClick(event)}>Login</a>
           
-       
+          <div>
+      <a className="App-btn btn3"
+       href="#" onClick={(event) => this.handleRegisterClick(event)}
+      >Hire a Detective</a>
+
         </div>
+        </div>
+       
         
     );
     }

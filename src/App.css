@@ -25,16 +25,16 @@ margin: 0%;
         top: 50%; /* Adjust this value to move the positioned div up and down */
         text-align: center;
         width: 40%;
-        animation: App-logo-spin infinite 5s linear ;
+        animation: App-logo-spin 1 10s linear ;
         height: 30vmin;
        
 }
 @keyframes App-logo-spin {
   from {
-    transform: rotate(-20deg);
+    transform: rotate(-180deg);
   }
   to {
-    transform: rotate(15deg);
+    transform: rotate(0deg);
   }
 }
 .App-btn {
@@ -58,4 +58,9 @@ margin: 0%;
 .btn2{
   right: 2%;
   top:5%
+}
+.btn3{
+  left:51%;
+  bottom:8%;
+  font-size: 20px;
 }
