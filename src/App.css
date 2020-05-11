@@ -1,0 +1,61 @@
+.App{
+margin: 0%;
+}
+.App-bg{
+  width: 100vw;
+  height: 98vh;
+  background-size: 110% 110%;
+  background-position: center center;
+  animation:1s ease-out 0s 1 slideInFromLeft ;
+   }
+   @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+.App-logo{
+  position: absolute;
+  z-index: 999;
+  margin: 0 auto;
+        left: 2%;
+        right: 0;
+        top: 50%; /* Adjust this value to move the positioned div up and down */
+        text-align: center;
+        width: 40%;
+        animation: App-logo-spin infinite 5s linear ;
+        height: 30vmin;
+       
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(-20deg);
+  }
+  to {
+    transform: rotate(15deg);
+  }
+}
+.App-btn {
+  position: absolute;
+   transform: translate(-50%, -50%);
+    background-color:skyblue;
+  color: black;
+  font-size: 15px;
+  padding: 12px 24px;
+  border: none;
+  cursor: grabbing;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: bold;
+  animation:1s ease-out 0s 1 slideInFromLeft ;
+   }
+.btn1{
+  top: 5%;
+  right: 9%;
+}
+.btn2{
+  right: 2%;
+  top:5%
+}
